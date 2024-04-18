@@ -13,7 +13,7 @@ class Sprite
 		this.scrollpos = 0;
 		// this.image.src = image_url;
 	}
-	
+
 	 isMario()      { return false; }
      isPipe()      { return false; }
      isGoomba() { return false; }
@@ -47,7 +47,7 @@ class Pipe extends Sprite
 	}
 	draw(ctx, scrollpos){
 		let pipeImage = new Image();
-		pipeImage.src = 'pipe.png';
+		pipeImage.src = 'images/pipe.png';
 		ctx.drawImage(pipeImage, this.Xval - scrollpos, this.Yval)
 	}
 	isPipe()
@@ -75,7 +75,7 @@ class Mario extends Sprite
 		for(var i=0; i < 5; i++){
 			// let num = (i+1);
 			this.marios[i] = new Image();
-			this.marios[i].src = 'mario'+ (i+1) +'.png';
+			this.marios[i].src = 'images/mario'+ (i+1) +'.png';
 		}
 	}
 
@@ -137,7 +137,7 @@ class Mario extends Sprite
 	draw(context, scrollpos){
 		let marioImage = new Image();
 		// this.index = this.currentImage;
-		marioImage.src = 'mario'+ this.currentImage +'.png';
+		marioImage.src = 'images/mario'+ this.currentImage +'.png';
 		// console.log("mario Index " + this.currentImage);
 
 		// context.drawImage(marioImage, this.Xval - scrollpos, this.Yval)
@@ -200,7 +200,7 @@ class Fireball extends Sprite{
 	
 	draw(ctx, scrollpos) {
 		let fireballImage = new Image();
-		fireballImage.src = 'fireball.png';
+		fireballImage.src = 'images/fireball.png';
 		ctx.drawImage(fireballImage, this.Xval - scrollpos, this.Yval);
 
 	}
@@ -227,7 +227,7 @@ class Goomba extends Sprite{
 		
 		if (this.goombaOnFire == null)
 		{
-			this.goombaOnFire = ("goomba_fire.png");	
+			this.goombaOnFire = ("images/goomba_fire.png");	
 		}
 	}
 
@@ -302,9 +302,9 @@ class Goomba extends Sprite{
 
 	draw(context, scrollpos){
 		let goombaImage = new Image();
-		goombaImage.src = 'goomba.png';
+		goombaImage.src = 'images/goomba.png';
 		let goombaOnFireImage = new Image();
-		goombaOnFireImage.src = 'goomba_fire.png';
+		goombaOnFireImage.src = 'images/goomba_fire.png';
 		if(this.setFire){
             context.drawImage(goombaOnFireImage, this.Xval - scrollpos, this.Yval);
         }
